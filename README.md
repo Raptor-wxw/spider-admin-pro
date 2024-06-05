@@ -48,12 +48,12 @@ $ pip3 install spider-admin-pro
 $ pip3 install -U spider-admin-pro -i https://pypi.org/simple
 
 # Linux macOS 运行启动
-$ gunicorn 'spider_admin_pro.main:app'
+$ gunicorn 'spider_admin_pro:app'
 
 # windows 环境使用waitress 替换 gunicorn
 $ pip install waitress
 
-$ waitress-serve --listen=127.0.0.1:8000 'spider_admin_pro.main:app'
+$ waitress-serve --listen=127.0.0.1:8000 'spider_admin_pro:app'
 ```
 
 方式二：
@@ -105,7 +105,7 @@ docker run -e TZ=Asia/Shanghai -p 8000:8000 -v ./config.yml:/app/config.yml moud
 $ ls
 config.yml
 
-$ gunicorn 'spider_admin_pro.main:app'
+$ gunicorn 'spider_admin_pro:app'
 ```
 > 强烈建议：修改密码和秘钥项
 
@@ -159,11 +159,19 @@ SCRAPYD_PASSWORD: ''
 
 > 备注：前端Vue项目，可入QQ群发送github用户名获取权限
 
-获取前端源码的两个方式：
+获取前端源码的几个方式：
 
 - 方式一：提供github的用户名
 
 - 方式二：先赞助项目￥10，再提供github的用户名
+
+- 方式三：关注微信公众号：
+
+<img src="https://gitee.com/mouday/domain-admin/raw/master/image/coding-big-tree.jpg" width="300">
+
+回复：`spider-admin-web`，获取完整的前端代码
+
+回复：`spider-admin`，可加入Python技术交流群，和更多开发者学习交流遇到的问题
 
 spider-admin-pro项目主要目录结构：
 
@@ -249,7 +257,14 @@ Scrapyd 不能直接暴露在外网
 | 2023-10-19 | [@shuiniu86](https://github.com/shuiniu86) | ￥50.00
 | 2023-10-24 | [@yuzhou6](https://github.com/yuzhou6) | ￥50.00
 | 2023-11-13 | [@xuedipiaofei](https://github.com/xuedipiaofei) | ￥50.00
-
+| 2024-01-06 | [@if-always](https://github.com/if-always) | ￥10.00
+| 2024-01-21 | [@dydwgmcnl4241](https://github.com/dydwgmcnl4241) | ￥10.00
+| 2024-02-18 | [@zhaolipo](https://github.com/zhaolipo) | ￥10.00
+| 2024-02-19 | [@qianwangali](https://github.com/qianwangali) | ￥10.00
+| 2024-02-20 | 没事干的小伙子 | ￥8.88
+| 2024-02-20 | [@ning-0217](https://github.com/ning-0217) | ￥50.00
+| 2024-03-08 | [@zhaolipo](https://github.com/zhaolipo) | ￥20.00
+| 2024-03-18 | [@magiceric](https://github.com/magiceric) | ￥88.00
 
 <img src="https://github.com/mouday/spider-admin-pro/raw/master/doc/img/alipay.jpg" width="300">
 
@@ -321,11 +336,11 @@ pip install pywin32
 
 ```bash
 # 启动运行
-$ gunicorn 'spider_admin_pro.main:app'
+$ gunicorn 'spider_admin_pro:app'
 
 # 支持外网可访问，云服务器（阿里云或腾讯云）需要设置安全组 
 # 默认内网访问 --bind 127.0.0.1:8000
-$ gunicorn --bind '0.0.0.0:8000' 'spider_admin_pro.main:app'
+$ gunicorn --bind '0.0.0.0:8000' 'spider_admin_pro:app'
 ```
 
 更多设置，可参考[gunicorn](https://docs.gunicorn.org/en/stable/index.html)

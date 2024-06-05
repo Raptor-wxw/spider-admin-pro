@@ -17,3 +17,5 @@ ua-parser
 user-agents
 Werkzeug
 gunicorn
+flask-compress
+whitenoise
